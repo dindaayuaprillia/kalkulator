@@ -108,13 +108,18 @@ inputDecimal = (dot) => {
 }
 
 //--07----------PERCENTAGE-------------------
-const percent = document.querySelector(".percentage");
+const percentage = document.querySelector(".percentage");
 
-all-clear.addEventListener('click', () => {
-    
-    currentNumber = '0';
+const percent = () => {
+    prevNumber = '';
+    calculationOperator = '';
+    currentNumber = currentNumber * 0.01;
+}
+percentage.addEventListener("click", () => {
+    percent();
     updateScreen(currentNumber);
 });
+
 
 
 //for (let i=0, i>0, i++){
